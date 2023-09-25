@@ -29,9 +29,11 @@ npm install
 TWILIO_ACCOUNT_SID = twilio-sid-here
 TWILIO_AUTH_TOKEN = twilio-auth-token-here
 TWILIO_NUMBER = twilio-phone-number-here
+FIREBASE_SERVICE_ACCOUNT = { ...firebaseservice_account_private_key };
+
 ```
 
-4. Firebase is used for authentication to the API.  To set this up please use a firebase project here - https://console.firebase.google.com/.  From the firebase console go to project settings, service accounts and generate a new private key.  Copy this file into the firebase folder and rename it to ServiceAccount.json.  You can then use tokens from any authenticated user on this firebase project as a bearer toke n in the request to send an SMS.
+4. Firebase is used for authentication to the API.  To set this up please use a firebase project here - https://console.firebase.google.com/.  From the firebase console go to project settings, service accounts and generate a new private key.  Copy this file into the FIREBASE_SERVICE_ACCOUNT environment variable above. Not that the json needs to be on a single line for this to work. You can then use tokens from any authenticated user on this firebase project as a bearer token in the request to send an SMS.
 
 6. Run the API
 ```
