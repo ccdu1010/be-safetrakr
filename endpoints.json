@@ -1,0 +1,16 @@
+{
+  "GET /api": {
+    "description": "serves up a json representation of all the available endpoints of the api"
+  },
+  "POST /api/sms": {
+    "description": "sends an sms",
+    "queries": [],
+    "requestBodyFormat": {
+      "from": "phone_number",
+      "to": "phone_number",
+      "body": "string"
+    },
+    "exampleResponse": {
+    }
+  }
+}
